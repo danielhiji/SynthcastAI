@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  :root {
+  --primary-color: #0a0a1b;
+  --accent-color: #00BCD4;
+    --secondary-color: #6b46c1;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --bg-gradient: linear-gradient(to bottom right, #0a0a1b, #1a1a2e);
+  }
+
+html {
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+@layer utilities {
+  .input-class {
+    @apply text-16 bg-black-1/50 rounded-xl border border-black-4/50 text-white-1 placeholder:text-gray-400 
+    focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 
+    transition-all duration-300;
+  }
+
+  .podcast_grid {
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
+  }
+
+  .right_sidebar {
+    @apply sticky right-0 top-0 h-screen w-[310px] flex flex-col 
+    bg-gradient-to-b from-black-1 via-[#1a1a2e] to-black-2 
+    border-l border-black-4/30 backdrop-blur-xl
+    px-6 py-8 max-xl:hidden;
+  }
+
+  .left_sidebar {
+    @apply sticky left-0 top-0 h-screen w-[270px] flex flex-col 
+    bg-gradient-to-b from-black-1 via-[#1a1a2e] to-black-2 
+    border-r border-black-4/30 backdrop-blur-xl
+    px-6 py-8 max-md:hidden;
+  }
+
+  .generate_thumbnail {
+    @apply mt-6 flex w-full max-w-[520px] flex-col justify-between gap-4 
+    rounded-xl border border-black-4/50 bg-black-1/30 backdrop-blur-xl
+    p-4 md:flex-row;
+  }
+
+  .image_div {
+    @apply flex-center mt-5 h-[142px] w-full cursor-pointer flex-col gap-3 
+    rounded-xl border-2 border-dashed border-cyan-400/30
+    bg-black-1/30 hover:border-cyan-400/50 transition-all duration-300;
+  }
+
+  .carousel_box {
+    @apply relative flex h-fit aspect-square w-full flex-none cursor-pointer 
+    rounded-xl border border-black-4/50 bg-black-1/30 
+    hover:border-cyan-400/50 transition-all duration-300;
+  }
+
+  .button_bold-16 {
+    @apply text-[16px] font-bold text-white-1 transition-all duration-300
+    hover:text-cyan-400;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  /* Typography */
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .text-12 {
+    @apply text-[12px] leading-normal;
+  }
+
+  .text-14 {
+    @apply text-[14px] leading-normal;
+  }
+
+  .text-16 {
+    @apply text-[16px] leading-normal;
+  }
+
+  .text-18 {
+    @apply text-[18px] leading-normal;
+  }
+
+  .text-20 {
+    @apply text-[20px] leading-normal;
+  }
+
+  .text-24 {
+    @apply text-[24px] leading-normal;
+  }
+
+  .text-32 {
+    @apply text-[32px] leading-normal;
+  }
+
+  /* Glass Effects */
+  .glassmorphism {
+    @apply bg-black-1/10 backdrop-blur-md border border-white/10;
+  }
+
+  .glassmorphism-black {
+    @apply bg-black-1/60 backdrop-blur-xl border border-black-4/30;
+  }
+
+  /* Hover Effects */
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20;
+  }
+
+  /* Custom Gradients */
+  .gradient-border {
+    @apply border border-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-border;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
