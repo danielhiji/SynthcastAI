@@ -11,7 +11,7 @@
 
 ## Relevant Links
 
-- $CAST: 
+- $CAST: GnZjpgNSnVmG9zC6k1Rh4UW3j7chEt6vAV49iGy1pump
 - Website: https://synthcastai.com
 - Twitter: https://x.com/synthcastai
 

@@ -34,7 +34,7 @@ export const socialLinks = [
   },
   {
     imgURL: "https://iili.io/2UBgdjn.png",
-    href: "https://pump.fun/coin/",
+    href: "https://pump.fun/GnZjpgNSnVmG9zC6k1Rh4UW3j7chEt6vAV49iGy1pump",
     label: "Pump.fun",
   },
 ];
